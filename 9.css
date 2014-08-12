@@ -1,0 +1,599 @@
+html{
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+}
+body{
+	margin: 0 auto;
+	padding: 0;
+	width: 40em;
+	position: relative;
+	overflow-y: scroll;
+}
+a{
+	text-decoration: none;
+	transition: .3s;
+}
+
+body>nav,body>footer{
+	position: fixed;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: .75em;
+}
+body>nav{
+	height: 2em;
+	bottom: 1.5em;
+	background: silver;
+}
+body>nav ul{
+	margin: 0 auto;
+}
+body>nav li{
+	display: inline-block;
+	border-left: .1em solid white;
+}
+body>nav li:last-child{
+	border-right: .1em solid white;
+}
+body>nav a{
+	display: inline-block;
+	line-height: 2;
+	color: white;
+	padding: 0 1em;
+}
+body>nav .feed a, body>nav .admin a{
+	padding: 0 .5em;
+}
+body>nav a:hover{
+	color: gray;
+	background: white;
+}
+body>footer{
+	bottom: 0;
+	height: 1.5em;
+	color: silver;
+	background: white;
+}
+body>footer a{
+	color: gray;
+	display: inline-block;
+	line-height: 1.5;
+	padding: 0 .3em;
+}
+body>footer a:hover{
+	color: white;
+	background: silver;
+}
+body>.hfeed{
+	text-align: center;
+	padding: 3em 0;
+}
+
+h1{
+	font-size: 3em;
+	z-index: 10;
+	margin: .3em;
+}
+h1 a{
+	color: silver;
+	text-shadow: 0 0 .1em rgba(0,0,0,.1);
+}
+h1 a:hover{
+	color: gray;
+	text-shadow: .1em .1em .1em rgba(0,0,0,.2);
+}
+h1 a:before{
+	content: '『 ';
+}
+h1 a:after{
+	content: ' 』';
+}
+body>section h1 a{
+	display:inline-block;
+	width:13em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;;
+}
+
+article{
+	position: relative;
+}
+article p{
+	text-indent: 2em;
+}
+
+
+body>section aside{
+	border: 0.1em solid whitesmoke ;
+	background: whitesmoke;
+	color: gray;
+	font-style: italic;
+	text-align: left;
+}
+body>section .entry-meta time:before{
+	content: '{ Date: "';
+}
+body>section .entry-meta time:after{
+	content: '"';
+}
+body>section .entry-meta span:before{
+	content: ', Cates: [ ';
+}
+body>section .entry-meta span:after{
+	content: ' ] }';
+}
+body>section .entry-meta span a:before{
+	content: ' "';
+}
+body>section .entry-meta span a:after{
+	content: '",';
+}
+body>section .entry-meta span a:last-child:after{
+	content: '"';
+}
+
+body>section aside a{
+	color: gray;
+}
+body>section aside{
+	height: 0;
+}
+
+body>section div{
+	text-align: left;
+	background: white;
+	border: 0.1em solid whitesmoke ;
+	max-height: 0;
+}
+body>section aside, body>section div{
+	opacity: 0;
+	transition: .3s;
+	padding: 0 1em;
+	margin: 0;
+	overflow: hidden;
+}
+body>section p{
+	margin: 0;
+}
+body>section article:hover aside, body>section article:hover div{
+	opacity: 1;
+}
+body>section article:hover aside{
+	padding: .3em 1em;
+	height: 1.5em;
+}
+body>section article:hover div{
+	padding: .5em 1em;
+	max-height: 20em;
+}
+body>section>nav ol{
+	list-style: none;
+}
+
+body>section>nav li{
+	display: inline-block;
+}
+body>section>nav .current a{
+	background: whitesmoke;
+}
+body>section>nav a{
+	display: inline-block;
+	padding: .3em .5em;
+	color: gray;
+}
+body>section>nav a:hover{
+	color: white;
+	background: silver;
+}
+
+body>article>aside{
+	border: 0.1em solid whitesmoke ;
+	background: whitesmoke;
+	color: gray;
+	font-style: italic;
+	text-align: left;
+	font-size: .75em;
+	padding: .5em 1em;
+}
+body>article>aside>*{
+	display: block;
+}
+body>article>aside>time:before{
+	content: 'Date: "';
+}
+body>article>aside>time:after{
+	content: '"';
+}
+body>article>aside>cite:before{
+	content: ' Author: ';
+}
+body>article>aside>.cates:before{
+	content: ' Cates: [ ';
+}
+body>article>aside>.cates:after{
+	content: ' ]';
+}
+body>article>aside>.tags:before{
+	content: ' Tags: [ ';
+}
+body>article>aside>.tags:after{
+	content: ' ]';
+}
+body>article>aside a:before{
+	content: '"';
+}
+body>article>aside a:after{
+	content: '", ';
+}
+body>article>aside a:last-child:after{
+	content: '"';
+}
+body>article>aside a{
+	color: gray;
+}
+body>article>aside a:hover{
+	text-decoration: underline;
+	text-shadow: 0 0 .1em rgba(0,0,0,.3);
+}
+
+
+.entry-content{
+	text-align: left;
+}
+body>article>.entry-content{
+	padding: 0 0 1em 0;
+}
+
+.entry-nearby{
+	text-align: left;;
+}
+.entry-nearby a{
+	display: inline-block;
+	width: 50%;
+	background: whitesmoke;
+	color: silver;
+	text-align: center;
+	padding: .3em 0;
+}
+.entry-nearby a:first-child:before{
+	content: '« ';
+}
+.entry-nearby a:nth-child(2):after{
+	content: ' »';
+}
+
+.entry-nearby a:hover{
+	background: silver;
+	color: white;
+}
+#comments{
+	text-align: left;
+	margin: 1em 0 ;
+}
+#comments a{
+	color: gray;
+}
+.comment-body>.title{
+	padding: 0 2em;
+}
+.comment-list{
+	list-style: none;
+	padding: 0;
+	border-left: .5em solid whitesmoke;
+}
+.comment-body cite{
+	font-style: normal;
+}
+.comment-body time{
+	font-size: .75em;
+}
+.comment-content{
+	border-top: .5em solid whitesmoke;
+	padding: 0 1em;
+}
+.comment-children{
+	padding: 0 0 0 1.5em;
+}
+.comment-body{
+	margin: 1em 0 0 0;
+}
+.comment-reply{
+	display: inline-block;
+	border-bottom: .5em solid whitesmoke;
+}
+.comment-reply a{
+	padding: .2em 1.5em;
+	display: inline-block;
+	background: white;
+	font-size: .75em;
+}
+.cancel-comment-reply a{
+	padding: .2em 1.5em;
+	display: inline-block;
+	background: white;
+	font-size: .75em;
+}
+
+.comment-body .respond form{
+	border-left: none;
+}
+.comment-body>.comment-reply:nth-last-child(2){
+	color: red;
+	display: none;
+}
+
+.respond form{
+	border: .5em solid whitesmoke;
+}
+.respond form div{
+	padding: .25em 1em;
+}
+.respond label:after{
+	content: ': ';
+}
+.respond input{
+	width: 33%;
+	border: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: .5em 1em;
+}
+.respond input:last-child{
+	width: 34%;
+}
+.respond textarea{
+	width: 100%;
+	margin: 0;
+	padding: 1em;
+	box-sizing: border-box;
+	border: none;
+}
+#response{
+	border-top: .5em solid whitesmoke;
+}
+.respond textarea: focus, .respond input: focus{
+	text-shadow: 0 0 .1em rgba(0,0,0,.3);
+}
+
+.respond form input[type="submit"]{
+	width: 100%;
+	background: white;
+	color: gray;
+	font-weight: bolder;
+}
+.respond form input[type="submit"]:hover{
+	text-shadow: 0 0 .1em rgba(0,0,0,.3);
+}
+.loggedinUsrInfo a{
+	color: silver;
+	width: 50%;
+	padding: .5em 0;
+	display: inline-block;
+}
+.loggedinUsrInfo a:hover{
+	color: gray;
+	text-shadow: 0 0 .1em rgba(0,0,0,.3);
+}
+body>aside{
+	position: fixed;
+	width: 40em;
+	height: 2.1em;
+	overflow: hidden;
+	top: 0;
+	box-sizing: border-box;
+}
+body>aside:hover{
+	height: auto;
+	bottom: 2em;
+	background: white;
+	border: .5em solid whitesmoke;
+	border-top: none;
+}
+body>aside>.widgets{
+	position: absolute;
+	top: 2.1em;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: auto;
+}
+#search{
+	text-align: right;
+	position: relative;
+	line-height: 0.9;
+}
+#search input{
+	font-size: 0.8em;
+	border: .625em solid whitesmoke;
+	color: silver;
+	margin: 0;
+}
+#search input[type="submit"]{
+	background: whitesmoke;
+	border-left: none;
+}
+#search input:hover{
+	color: gray;
+}
+body>aside:hover #search input[type="submit"]{
+	border-right: none;
+}
+.widget{
+	margin: 1em;
+}
+.widget:before{
+	content: attr(title);
+	font-weight: bolder;
+	color: silver;
+	border-bottom: .3em solid whitesmoke;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	display: block;
+}
+.widget ul{
+	list-style: none;
+	margin: 0 1em;
+	padding: 0;
+	line-height: 1.2;
+}
+.widget li {
+	display: inline;
+}
+.widget a{
+	color: gray;
+	display: inline-block;
+	width: 16.8em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
+	box-sizing: border-box;
+	padding: .5em 1em;
+}
+.widget a:hover{
+	background: whitesmoke;
+}
+#widget_archives_year a{
+	width: 8.2em;
+}
+
+.entry-content .links, #link_readers{
+	max-width: auto;
+	list-style: none;
+}
+.entry-content .links:before, #link_readers:before{
+	content: attr(title);
+	font-weight: bolder;
+	color: silver;
+	border-bottom: .3em solid whitesmoke;
+	text-align: center;
+	display: block;
+}
+.entry-content .links li, #link_readers li{
+	display: inline;
+}
+.entry-content .links a{
+	display: inline-block;
+	width: 50%;
+	line-height: 2em;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: gray;
+}
+.entry-content .links a:hover{
+	background: whitesmoke;
+}
+
+
+
+
+
+
+
+
+.entry-content{
+    color: #444444;
+    line-height: 1;
+}
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4 {
+    color: #111111;
+    font-weight: 400;
+}
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content p {
+    margin-bottom: 1.5em;
+    padding: 0;
+}
+.entry-content h1 {
+    font-size: 3em;
+}
+.entry-content h2 {
+    font-size: 2.25em;
+    /* The bottom margin is small. It's designed to be used with gray meta text
+     * below a post title. */
+    margin: 1.5em 0 0.375em;
+}
+.entry-content h3 {
+    font-size: 1.5em;
+}
+.entry-content h4 {
+    font-size: 1.3125em;
+}
+.entry-content h5 {
+    font-size: 1.125em;
+}
+.entry-content a {
+    color: #0099ff;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+.entry-content a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+.entry-content a: visited {
+    color: purple;
+}
+.entry-content ul, .entry-content ol {
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+}
+.entry-content li {
+    line-height: 1.5;
+}
+.entry-content li ul, .entry-content li ol {
+    margin-left: 1.5em;
+}
+.entry-content p, .entry-content ul, .entry-content ol {
+    font-size: 1em;
+    line-height: 1.5;
+}
+.entry-content ul, .entry-content ol {
+    max-width: 34em;
+}
+.entry-content pre {
+    padding: 0 1.5em;
+    max-width: 40em;
+    white-space: pre-wrap;
+}
+.entry-content code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+    font-size: 0.8125em;
+}
+.entry-content aside {
+    display: block;
+    float: right;
+    width: 24em;
+}
+.entry-content blockquote {
+    border-left: .5em solid #eee;
+    padding: 0 2em;
+    margin-left: 0;
+    max-width: 30em;
+}
+.entry-content blockquote  cite {
+    font-size: 0.875em;
+    line-height: 1.25;
+    color: #bfbfbf;
+}
+.entry-content blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+.entry-content blockquote p {  
+    color: #666;
+    max-width: 28.75em;
+}
+.entry-content hr {
+    width: 33.75em;
+    text-align: left;
+    margin: 0 auto 0 0;
+    color: #999;
+}
