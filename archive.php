@@ -1,5 +1,6 @@
-<?php $this->need('header.php'); ?>
-<section class="hfeed archive">
+<?php $this->need('Include\header.php'); ?>
+<div class="hfeed">
+<section class="archive">
 <?php if ($this->have()): ?>
 <?php while($this->next()): ?>
 <article class="hentry">
@@ -18,5 +19,6 @@
 <?php endif; ?>
 <nav class="pagenav"><?php $this->pageNav(); ?></nav>
 </section>
-<?php $this->need('aside.php'); ?>
-<?php $this->need('footer.php'); ?>
+<?php $this->need('Include\aside.php'); ?>
+</div>
+<?php $this->need('Include\footer.php'); ?>

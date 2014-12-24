@@ -1,0 +1,58 @@
+
+#title {
+    margin: -.5em 0 0 0;
+    font-size:4em;
+    font-weight:bolder;
+    a{
+        &:hover{
+            text-decoration:none;
+        }
+    }
+}
+
+#description {
+    margin: -2em 0 0 0;
+    padding:.3em 0 0 0;
+    border-top:.5em solid $borderColor;
+    color:$borderColor;
+}
+
+
+section{
+    height: 22em;
+}
+
+
+#pagination {
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:3em;
+    font-size:0.8em;
+    ol{
+        list-style:none;
+    }
+    li{
+        display:inline-block;
+    }
+    a{
+        display:inline-block;
+        text-indent:-100em;
+        overflow:hidden;
+        width:1em;
+        height:1em;
+        margin:.5em;
+        border:0.1em solid $borderColor;
+        &:hover{
+            background:$borderColor;
+        }
+    }
+    .current{
+        a{
+            background:$borderColor;
+        }
+    }
+}
+
+
+

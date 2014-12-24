@@ -8,9 +8,10 @@
  * @link http://perichr.org
  */
  
-$this->need('header.php');
+$this->need('Include/header.php');
 ?>
-<section class="hfeed index">
+<div class="hfeed">
+<section class="index">
 <?php while($this->next()): ?>
 <article class="hentry">
 	<h1 class="entry-title"><a href="<?php $this->permalink(); ?>" title="『<?php $this->title() ?>』 by <?php $this->author(); ?>" rel="bookmark"><?php $this->title() ?></a></h1>
@@ -23,5 +24,6 @@ $this->need('header.php');
 <?php endwhile; ?>
 <nav class="pagenav"><?php $this->pageNav(); ?></nav>
 </section>
-<?php $this->need('aside.php'); ?>
-<?php $this->need('footer.php'); ?>
+<?php $this->need('Include/aside.php'); ?>
+</div>
+<?php $this->need('Include/footer.php'); ?>

@@ -1,0 +1,55 @@
+#navigate{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:1.8em;
+    background: $foreColor;
+    font-size:75%;
+    ul{
+        list-style: none;
+        margin:0;
+    }
+    li{
+        display: inline-block;
+        border-right:0.1em solid $backgroundColor;
+        &:last-child{
+            border-right:none;
+        }
+        &:nth-child(6) a{
+            padding:0.3em 0.5em;
+        }
+    }
+    a{
+        color: $backgroundColor;
+        font-weight:bolder;
+        display: inline-block;
+        padding:0.3em 1em;
+        &:hover{
+            color: $normalColor;
+            background: $backgroundColor;
+            text-shadow:none;
+        }
+    }
+}
+
+#copyright{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:0 .2em;
+    font-size:75%;
+    background: $backgroundColor;
+    a{
+        font-weight:bolder;
+        text-decoration: underline;
+        display:inline-block;
+        color: $normalColor;
+        padding:0 .2em;
+        &:hover{
+            text-decoration: none;
+            color: $backgroundColor;
+            background: $foreColor;
+        }
+    }
+}

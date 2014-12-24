@@ -1,5 +1,6 @@
-<?php $this->need('header.php'); ?>
-<article class="hfeed hentry">
+<?php $this->need('Include\header.php'); ?>
+<div class="hfeed post">
+<article class="hentry post">
 	<h1 class="entry-title"><a href="<?php $this->permalink(); ?>" rel="bookmark"><?php $this->title() ?></a></h1>
 	<aside class="entry-meta">
 		<time datetime="<?php $this->date('Y-m-d'); ?>" pubdate="pubdate"><?php $this->date('Y-m-d'); ?></time>
@@ -9,7 +10,8 @@
 	</aside>
 	<div class="entry-content"><?php $this->content(); ?></div>
 	<nav class="entry-nearby"><?php $this->thePrev(); ?><?php $this->theNext(); ?></nav>
-	<?php $this->need('comments.php'); ?>
+	<?php $this->need('Include\comments.php'); ?>
 </article>
-<?php $this->need('aside.php'); ?>
-<?php $this->need('footer.php'); ?>
+<?php $this->need('Include\aside.php'); ?>
+</div>
+<?php $this->need('Include\footer.php'); ?>

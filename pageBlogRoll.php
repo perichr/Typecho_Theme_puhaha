@@ -6,7 +6,8 @@
  */
 ?>
 <?php $this->need('header.php'); ?>
-<article class="hfeed hentry">
+<div class="hfeed">
+<article class="hentry page">
 	<h1 class="entry-title"><a href="<?php $this->permalink(); ?>" rel="bookmark"><?php $this->title() ?></a></h1>
 	<div class="entry-content"><?php $this->content(); ?>
 <?php if(PHH_IsPluginActived('Links')): ?>
@@ -22,4 +23,5 @@
 	<?php $this->need('comments.php'); ?>
 </article>
 <?php $this->need('aside.php'); ?>
+</div>
 <?php $this->need('footer.php'); ?>

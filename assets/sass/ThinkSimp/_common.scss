@@ -1,0 +1,26 @@
+*{
+    transition:0.3s;
+}
+a{
+    text-decoration: none;
+    color:$foreColor;
+    &:hover{
+        color:$normalColor;
+    }
+}
+html {
+    height:100%;
+    background: $htmlBackground;
+}
+body {
+    margin:0 auto;
+    text-align:center;
+    max-width:60em;
+    padding:3em 0 5em 0;
+    text-align:center;
+}
+
+#description {
+    text-indent:0;
+}
+
